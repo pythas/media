@@ -27,7 +27,7 @@ services:
       - /data/storage:/data
       - /:/shared
     environment:
-      - TZ=Europe/London
+      - TZ=Europe/Stockholm
 
   qbittorrent:
     image: linuxserver/qbittorrent
@@ -43,11 +43,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Stockholm
       - UMASK_SET=002
       - WEBUI_PORT=8086
 
-  sabnzbd: 
+  sabnzbd:
     image: linuxserver/sabnzbd
     container_name: sabnzbd
     volumes:
@@ -59,7 +59,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Stockholm
 
   radarr:
     image: linuxserver/radarr
@@ -74,7 +74,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Stockholm
 
   sonarr:
     image: linuxserver/sonarr
@@ -89,7 +89,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Stockholm
 
   jackett:
     image: linuxserver/jackett
@@ -104,4 +104,4 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Stockholm
