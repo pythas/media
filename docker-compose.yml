@@ -67,7 +67,7 @@ services:
     container_name: radarr
     volumes:
       - /srv/docker/radarr/config:/config
-      - /data/movies:/data
+      - /data/movies:/movies
       - /etc/localtime:/etc/localtime:ro
     ports:
       - 7878:7878
