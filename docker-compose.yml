@@ -29,14 +29,14 @@ services:
     environment:
       - TZ=Europe/Stockholm
 
-  qbittorrent:
-    image: linuxserver/qbittorrent
-    container_name: qbittorrent
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
     volumes:
-      - /srv/docker/qbittorrent/config:/config
+      - /srv/docker/deluge/config:/config
       - /data/downloads:/downloads
     ports:
-      - 8086:8086
+      - 8112:8112
       - 6881:6881
       - 6881:6881/udp
     restart: unless-stopped
@@ -44,8 +44,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Stockholm
-      - UMASK_SET=002
-      - WEBUI_PORT=8086
 
   sabnzbd:
     image: linuxserver/sabnzbd
